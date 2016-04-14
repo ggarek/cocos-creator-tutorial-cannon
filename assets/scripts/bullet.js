@@ -8,7 +8,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.timeToLive = 2000;
+        this.timeToLive = 4000;
         this.lifeTime = 0;
     },
 

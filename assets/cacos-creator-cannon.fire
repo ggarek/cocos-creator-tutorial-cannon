@@ -251,10 +251,9 @@
     },
     "_enabled": true,
     "space": null,
-    "gravity": -350,
+    "gravity": -150,
     "bulletSprite": {
       "__uuid__": "6f2c1f76-21ff-4283-82d8-4c5880acb8b9"
-    },
-    "bullets": []
+    }
   }
 ]

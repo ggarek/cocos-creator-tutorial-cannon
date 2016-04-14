@@ -75,7 +75,7 @@ cc.Class({
                         const h = cannon.barrelNode.height;
                         cpos.x += h * sind(angle);
                         cpos.y += h * cosd(angle);
-                        cc.find('/game').getComponent('game').createBullet(cpos.x, cpos.y, 200, angle); 
+                        cc.find('/game').getComponent('game').createBullet(cpos.x, cpos.y, 400, angle);
                         break;
                 }
             },

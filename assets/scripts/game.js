@@ -26,7 +26,7 @@ cc.Class({
     onLoad: function () {
         // Create physics space
         this.space = new cp.Space();
-        this.space.gavity = cp.v(0, this.gravity);
+        this.space.gravity = cp.v(0, this.gravity);
         
         // Add game floor
         const floor = new cp.SegmentShape(
@@ -47,6 +47,29 @@ cc.Class({
         bulletSprite.spriteFrame = this.bulletSprite;
         const pos = bulletNode.position = cc.v2(x, y);
         bulletNode.setRotation(angle);
+        
+        // Create physics
+        const verts = [
+            -5/2, -5/2,
+            -5/2,  5/2,
+             5/2,  5/2,
+             5/2, -5/2,
+        ];
+        
+        // Body(m, i)
+        const body = new cp.Body(1.0, cp.momentForPoly(1.0, verts, cp.vzero));
+        body.setPos(bulletNode.position);
+        body.setVel(cp.v(sind(angle) * velocity, cosd(angle) * velocity));
+        this.space.addBody(body);
+        
+        // Shape
+        const shape = new cp.PolyShape(body, verts, cp.vzero);
+        shape.e = 0.5;
+        shape.u = 0.5;
+        this.space.addShape(shape);
+        
+        // Add bullet script
+        bulletNode.addComponent('bullet').setBody(body);
         
         // Finally add bullet to the scene
         cc.director.getScene().addChild(bulletNode);
