@@ -36,6 +36,15 @@ cc.Class({
             10
         );
         this.space.addStaticShape(floor);
+        
+        // create bullet verts
+        const { width: bw, height: bh } = this.bulletSprite.getRect();
+        this.bulletVerts = [
+            -bw/2, -bh/2,
+            -bw/2,  bh/2,
+             bw/2,  bh/2,
+             bw/2, -bh/2
+        ];
     },
     
     createBullet(x, y, velocity, angle) {
@@ -49,12 +58,7 @@ cc.Class({
         bulletNode.setRotation(angle);
         
         // Create physics
-        const verts = [
-            -5/2, -5/2,
-            -5/2,  5/2,
-             5/2,  5/2,
-             5/2, -5/2,
-        ];
+        const verts = this.bulletVerts;
         
         // Body(m, i)
         const body = new cp.Body(1.0, cp.momentForPoly(1.0, verts, cp.vzero));
