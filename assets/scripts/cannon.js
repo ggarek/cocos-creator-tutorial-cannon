@@ -48,12 +48,13 @@ cc.Class({
         tankSprite.spriteFrame = this.tankSprite;
         this.node.addChild(tankNode);
         
-        this.barrelPosition = tankNode.height * 0.4;
+        this.barrelPosition = tankNode.height / 2 - 2;
         
         // Position barrel
         barrelNode.setPosition(0, this.barrelPosition);
         
         this.hookInput();
+        this.updatePostion();
     },
     
     hookInput() {
@@ -68,6 +69,14 @@ cc.Class({
                     case cc.KEY.right:
                         cannon.angleSpeed = cannon.baseAngleSpeed;
                         break;
+                    case cc.KEY.space:
+                        const cpos = cannon.barrelNode.convertToWorldSpaceAR(cc.v2(0, 0));
+                        const angle = cannon.barrelNode.rotation;
+                        const h = cannon.barrelNode.height;
+                        cpos.x += h * sind(angle);
+                        cpos.y += h * cosd(angle);
+                        cc.find('/game').getComponent('game').createBullet(cpos.x, cpos.y, 200, angle); 
+                        break;
                 }
             },
             onKeyReleased(kcode, e) {
@@ -80,16 +89,19 @@ cc.Class({
             }
         }, this.node);
     },
+    
+    updatePostion() {
+        const { angle, barrelPosition: r } = this;
+        this.barrelNode.setRotation(angle);
+        this.barrelNode.setPosition(r * sind(angle), r * cosd(angle));
+    },
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
         const { angleSpeed } = this;
         if (angleSpeed !== 0) {
-            const angle = this.angle = clamp(this.angle + angleSpeed * dt, -1 * this.leftMaxAngle, this.rightMaxAngle);
-            const r = this.barrelPosition;
-            
-            this.barrelNode.setRotation(angle);
-            this.barrelNode.setPosition(r * sind(angle), r * cosd(angle));
+            this.angle = clamp(this.angle + angleSpeed * dt, this.leftMaxAngle, this.rightMaxAngle);
+            this.updatePostion();
         }
     },
 });
