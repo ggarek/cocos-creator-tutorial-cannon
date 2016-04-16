@@ -69,7 +69,20 @@ cc.Class({
         
         // create verts for physics
         this.bulletVerts = createVertsFromRect(this.bulletSprite.getRect());
-        this.meteorVerts = createVertsFromRect(this.meteorSprite.getRect());       
+        this.meteorVerts = createVertsFromRect(this.meteorSprite.getRect());
+        
+        // create collision handlers
+        const shapesToRemove = this.shapesToRemove = [];
+        this.space.addCollisionHandler(METEOR_SHAPE, BULLET_SHAPE, null, null, (arbiter, space) => {
+            const { a, b } = arbiter;
+
+            // We can not remove shapes and bodies just now,
+            // it is forbidden during physics space step.
+            // So we keep it to remove after physics step is done.            
+            shapesToRemove.push(a);
+            shapesToRemove.push(b);
+            return true;
+        })
     },
     
     start() {
@@ -152,7 +165,19 @@ cc.Class({
     update: function (dt) {
         const { space, shapesToRemove } = this;
         if (space) {
-            space.step(dt);            
+            space.step(dt);
+            if (shapesToRemove.length > 0) {
+                for (let i = 0; i < shapesToRemove.length; i++) {
+                    const shape = shapesToRemove[i];
+                    // Remove shapes from space
+                    space.removeShape(shape);
+                    // Remove bodies from space
+                    space.removeBody(shape.body);
+                    // Destroy nodes (saved as userData)
+                    shape.body.userData.destroy();
+                }
+                shapesToRemove.length = 0;
+            }
         }
     },
 });
