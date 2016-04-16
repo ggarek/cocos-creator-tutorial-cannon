@@ -67,7 +67,7 @@ cc.Class({
         // Add game floor
         const floor = new cp.SegmentShape(
             this.space.staticBody,
-            cp.v(0, 20),
+            cp.v(0, 100),
             cp.v(2000, 100),
             10
         );
