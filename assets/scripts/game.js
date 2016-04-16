@@ -1,8 +1,27 @@
-const { cos, sin, PI } = Math;
+const { cos, sin, PI, random } = Math;
 const rad = deg => deg * PI / 180;
 const cosd = deg => cos(rad(deg));
 const sind = deg => sin(rad(deg));
 const clamp = (val, min, max) => val < min ? min : val > max ? max : val;
+const rand = (min, max) => min + (max - min) * random();
+
+const METEOR_SHAPE = 1;
+const BULLET_SHAPE = 2;
+
+function createBody(m, i, userData) {
+    const b = new cp.Body(m, i);
+    b.userData = userData;
+    return b;
+}
+
+function createVertsFromRect({ width: w, height: h }) {
+    return [
+        -w/2, -h/2,
+        -w/2,  h/2,
+        w/2,  h/2,
+        w/2, -h/2
+    ]; 
+}
 
 cc.Class({
     extends: cc.Component,
@@ -20,6 +39,17 @@ cc.Class({
             default: null,
             type: cc.SpriteFrame,
         },
+        meteorSprite: {
+            default: null,
+            type: cc.SpriteFrame,
+        },
+        
+        meteorSpawnMinX: 0,
+        meteorSpawnMaxX: 0,
+        meteorSpawnMinY: 0,
+        meteorSpawnMaxY: 0,
+        meteorMinVelocity: 0,
+        meteorMaxVelocity: 0,
     },
 
     // use this for initialization
@@ -37,14 +67,13 @@ cc.Class({
         );
         this.space.addStaticShape(floor);
         
-        // create bullet verts
-        const { width: bw, height: bh } = this.bulletSprite.getRect();
-        this.bulletVerts = [
-            -bw/2, -bh/2,
-            -bw/2,  bh/2,
-             bw/2,  bh/2,
-             bw/2, -bh/2
-        ];
+        // create verts for physics
+        this.bulletVerts = createVertsFromRect(this.bulletSprite.getRect());
+        this.meteorVerts = createVertsFromRect(this.meteorSprite.getRect());       
+    },
+    
+    start() {
+        this.scheduleCreateMeteor();
     },
     
     createBullet(x, y, velocity, angle) {
@@ -61,7 +90,7 @@ cc.Class({
         const verts = this.bulletVerts;
         
         // Body(m, i)
-        const body = new cp.Body(1.0, cp.momentForPoly(1.0, verts, cp.vzero));
+        const body = createBody(1.0, cp.momentForPoly(1.0, verts, cp.vzero), bulletNode);
         body.setPos(bulletNode.position);
         body.setVel(cp.v(sind(angle) * velocity, cosd(angle) * velocity));
         this.space.addBody(body);
@@ -70,6 +99,7 @@ cc.Class({
         const shape = new cp.PolyShape(body, verts, cp.vzero);
         shape.e = 0.5;
         shape.u = 0.5;
+        shape.setCollisionType(BULLET_SHAPE);
         this.space.addShape(shape);
         
         // Add bullet script
@@ -78,11 +108,51 @@ cc.Class({
         // Finally add bullet to the scene
         cc.director.getScene().addChild(bulletNode);
     },
+    
+    scheduleCreateMeteor() {
+        cc.director.getScheduler().schedule(this.createMeteor, this, 1 + random() * 1, false);
+    },
+    
+    createMeteorAndScheduleNext() {
+        this.createMeteor();
+        this.scheduleCreateMeteor();
+    },
+    
+    createMeteor() {
+        const x = rand(this.meteorSpawnMinX, this.meteorSpawnMaxX);
+        const y = rand(this.meteorSpawnMinY, this.meteorSpawnMaxY);
+        const angle = 90 + 25 + random() * 20;
+        const velocity = rand(this.meteorMinVelocity, this.meteorMaxVelocity);
+        
+        const node = new cc.Node();
+        node.addComponent(cc.Sprite).spriteFrame = this.meteorSprite;
+        node.setPosition(cc.v2(x, y));
+        
+        const verts = this.meteorVerts;
+        const body = createBody(1.0, cp.momentForPoly(1.0, verts, cp.vzero), node);
+        body.setPos(node.position);
+        body.setVel(cp.v(sind(angle) * velocity, cosd(angle) * velocity));
+        this.space.addBody(body);
+        
+        // Shape
+        const shape = new cp.PolyShape(body, verts, cp.vzero);
+        shape.e = 0.5;
+        shape.u = 0.5;
+        shape.setCollisionType(METEOR_SHAPE);
+        this.space.addShape(shape);
+        
+        // Add bullet script
+        node.addComponent('meteor').setBody(body);
+        
+        // Finally add bullet to the scene
+        cc.director.getScene().addChild(node);
+    },
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-        if (this.space) {
-            this.space.step(dt);
+        const { space, shapesToRemove } = this;
+        if (space) {
+            space.step(dt);            
         }
     },
 });
