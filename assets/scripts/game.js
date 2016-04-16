@@ -54,6 +54,10 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        meteorTailParticles: {
+            default: null,
+            type: cc.Prefab,
+        },
         
         meteorSpawnMinX: 0,
         meteorSpawnMaxX: 0,
@@ -171,6 +175,9 @@ cc.Class({
         const velocity = rand(this.meteorMinVelocity, this.meteorMaxVelocity);
         
         const node = new cc.Node();
+        // Add particle emitter        
+        node.addComponent(cc.ParticleSystem).file = cc.url.raw('/particles/meteor-tail-particles.plist');;
+        // Add sprite
         node.addComponent(cc.Sprite).spriteFrame = this.meteorSprite;
         node.setPosition(cc.v2(x, y));
         
@@ -188,7 +195,9 @@ cc.Class({
         this.space.addShape(shape);
         
         // Add bullet script
-        node.addComponent('meteor').setBody(body);
+        const meteor = node.addComponent('meteor');
+        meteor.setBody(body);
+        // meteor.setTail(cc.instantiate(this.meteorTailParticles));
         
         // Finally add bullet to the scene
         cc.director.getScene().addChild(node);
