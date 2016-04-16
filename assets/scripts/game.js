@@ -45,6 +45,11 @@ cc.Class({
             type: cc.SpriteFrame,
         },
         
+        bulletMeteorExplosion: {
+            default: null,
+            type: cc.Prefab,
+        },
+        
         meteorSpawnMinX: 0,
         meteorSpawnMaxX: 0,
         meteorSpawnMinY: 0,
@@ -83,6 +88,13 @@ cc.Class({
             // So we keep it to remove after physics step is done.            
             shapesToRemove.push(a);
             shapesToRemove.push(b);
+            
+            // Run animation
+            const meteorNode = a.body.userData;
+            const node = cc.instantiate(this.bulletMeteorExplosion);
+            node.setPosition(meteorNode.position.x, meteorNode.position.y);
+            cc.director.getScene().addChild(node);
+            node.getComponent(cc.Animation).play();
             return true;
         });
 
