@@ -50,6 +50,11 @@ cc.Class({
             type: cc.Prefab,
         },
         
+        meteorGroundExplosion: {
+            default: null,
+            type: cc.Prefab,
+        },
+        
         meteorSpawnMinX: 0,
         meteorSpawnMaxX: 0,
         meteorSpawnMinY: 0,
@@ -102,6 +107,13 @@ cc.Class({
         this.space.addCollisionHandler(FLOOR_SHAPE, METEOR_SHAPE, (arbiter, space) => {
             const { b } = arbiter;
             shapesToRemove.push(b);
+            
+            // Play animation
+            const meteorNode = b.body.userData;
+            const node = cc.instantiate(this.meteorGroundExplosion);
+            node.setPosition(meteorNode.position.x, meteorNode.position.y);
+            cc.director.getScene().addChild(node);
+            node.getComponent(cc.Animation).play();
             return true;
         });
     },
