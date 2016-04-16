@@ -7,6 +7,7 @@ const rand = (min, max) => min + (max - min) * random();
 
 const METEOR_SHAPE = 1;
 const BULLET_SHAPE = 2;
+const FLOOR_SHAPE = 3;
 
 function createBody(m, i, userData) {
     const b = new cp.Body(m, i);
@@ -65,6 +66,7 @@ cc.Class({
             cp.v(2000, 100),
             10
         );
+        floor.setCollisionType(FLOOR_SHAPE);
         this.space.addStaticShape(floor);
         
         // create verts for physics
@@ -73,7 +75,7 @@ cc.Class({
         
         // create collision handlers
         const shapesToRemove = this.shapesToRemove = [];
-        this.space.addCollisionHandler(METEOR_SHAPE, BULLET_SHAPE, null, null, (arbiter, space) => {
+        this.space.addCollisionHandler(METEOR_SHAPE, BULLET_SHAPE, (arbiter, space) => {
             const { a, b } = arbiter;
 
             // We can not remove shapes and bodies just now,
@@ -82,7 +84,14 @@ cc.Class({
             shapesToRemove.push(a);
             shapesToRemove.push(b);
             return true;
-        })
+        });
+
+        // Handle case when meteor touches the ground
+        this.space.addCollisionHandler(FLOOR_SHAPE, METEOR_SHAPE, (arbiter, space) => {
+            const { b } = arbiter;
+            shapesToRemove.push(b);
+            return true;
+        });
     },
     
     start() {
