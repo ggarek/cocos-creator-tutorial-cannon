@@ -7,6 +7,4 @@ Then i added the map to the Cocos Creator project and wrote a few lines of code.
 
 And, finally, created a node on the scene with the map. Thats all. No code.
 
-you can checkout git tag step0w to review the code
-
 [Step 07](./step07.md)
