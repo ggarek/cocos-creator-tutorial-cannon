@@ -16,13 +16,13 @@ After i completed the game i decided to describe the overall process succinctly.
 Lets review all steps:
 
 - [Step 01: Create the cannon and make the barrel move](./step01.md)
-- [Step 02: Add bullet and make the cannon shot](./step01.md)
-- [Step 03: Add some dangerous meteors](./step01.md)
-- [Step 04: A bullet? A meteor? Collide!](./step01.md)
-- [Step 05: What if...? Boom!](./step01.md)
-- [Step 06: Create the ground](./step01.md)
-- [Step 07: Every meteor needs a tail!](./step01.md)
-- [Step 08: I am not deaf!](./step01.md)
+- [Step 02: Add bullet and make the cannon shot](./step02.md)
+- [Step 03: Add some dangerous meteors](./step03.md)
+- [Step 04: A bullet? A meteor? Collide!](./step04.md)
+- [Step 05: What if...? Boom!](./step05.md)
+- [Step 06: Create the ground](./step06.md)
+- [Step 07: Every meteor needs a tail!](./step07.md)
+- [Step 08: I am not deaf!](./step08.md)
 
 _It may be more convenient to got through the resulting code first and then get back here for some hints and short explanations._
 
