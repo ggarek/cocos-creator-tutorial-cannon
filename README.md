@@ -18,3 +18,8 @@ And here are the links of tools and art i used for the tutorial:
 [Chipmunk API Reference](https://chipmunk-physics.net/release/ChipmunkLatest-API-Reference/)
 [Cocos Creator engine on Github](https://github.com/cocos-creator/engine)
 [Cocos Docs on Github](https://github.com/chukong/cocos-docs/pulse)
+
+# License
+The directory `./docs` and its contents are Copyright Igor Ovsiannikov. You may not reuse anything therein without my permission.
+
+All other directories and files are MIT Licensed. But if you use them, a link back to https://github.com/ggarek/cocos-creator-tutorial-cannon would be appreciated.
