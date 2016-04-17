@@ -46,6 +46,4 @@ Here you can see how to create a new node using a prefab. After the node with an
 
 Thats it. Now when a bullet meets a meteor an explosion occurs.
 
-you can checkout git tag step0w to review the code
-
 [Step 06](./step06.md)
