@@ -15,14 +15,14 @@ According to the main plot, the Earth is in dangeour of falling meteors, and the
 After i completed the game i decided to describe the overall process succinctly. The description is split into steps.
 Lets review all steps:
 
-1. Step 01: Create the cannon and make the barrel move
-2. Step 02: Add bullet and make the cannon shot
-3. Step 03: Add some dangerous meteors
-4. Step 04: A bullet? A meteor? Collide!
-5. Step 05: What if...? Boom!
-6. Step 06: Create the ground
-7. Step 07: Every meteor needs a tail!
-8. Step 08: I am not deaf!
+- [Step 01: Create the cannon and make the barrel move](./step01.md)
+- [Step 02: Add bullet and make the cannon shot](./step01.md)
+- [Step 03: Add some dangerous meteors](./step01.md)
+- [Step 04: A bullet? A meteor? Collide!](./step01.md)
+- [Step 05: What if...? Boom!](./step01.md)
+- [Step 06: Create the ground](./step01.md)
+- [Step 07: Every meteor needs a tail!](./step01.md)
+- [Step 08: I am not deaf!](./step01.md)
 
 _It may be more convenient to got through the resulting code first and then get back here for some hints and short explanations._
 
