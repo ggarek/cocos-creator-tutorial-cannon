@@ -273,6 +273,13 @@
     "meteorGroundExplosion": {
       "__uuid__": "3e1fee76-0cda-4498-a511-e5a71450e7c4"
     },
+    "meteorTailParticles": null,
+    "meteorExplodeInTheAirSFX": {
+      "__uuid__": "bff2635d-10c3-4ea0-b426-603291a54edf"
+    },
+    "meteorHitTheGroundSFX": {
+      "__uuid__": "17ff513d-5909-454e-9956-0d0e00ef6029"
+    },
     "meteorSpawnMinX": 100,
     "meteorSpawnMaxX": 300,
     "meteorSpawnMinY": 900,
@@ -621,7 +628,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_reorderChildDirty": false,
-    "_id": "3d25dNPaVlPhZgtQE2wPpdy",
+    "_id": "9d0a37E2iVIL5Eh81VocW4X",
     "_active": true,
     "_components": [
       {

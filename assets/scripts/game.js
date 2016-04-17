@@ -58,6 +58,14 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        meteorExplodeInTheAirSFX: {
+            default: null,
+            url: cc.AudioClip,            
+        },
+        meteorHitTheGroundSFX: {
+            default: null,
+            url: cc.AudioClip,
+        },
         
         meteorSpawnMinX: 0,
         meteorSpawnMaxX: 0,
@@ -104,6 +112,9 @@ cc.Class({
             node.setPosition(meteorNode.position.x, meteorNode.position.y);
             cc.director.getScene().addChild(node);
             node.getComponent(cc.Animation).play();
+
+            // Play sound effect
+            cc.audioEngine.playEffect(this.meteorExplodeInTheAirSFX, false);
             return true;
         });
 
@@ -118,6 +129,9 @@ cc.Class({
             node.setPosition(meteorNode.position.x, meteorNode.position.y);
             cc.director.getScene().addChild(node);
             node.getComponent(cc.Animation).play();
+
+            // Play sound effect
+            cc.audioEngine.playEffect(this.meteorHitTheGroundSFX, false);
             return true;
         });
     },
