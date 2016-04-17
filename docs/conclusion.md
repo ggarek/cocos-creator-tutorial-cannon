@@ -1,7 +1,19 @@
-# The Cannon
+# Conculsion
 
-The Cannon is a simple game i built to get to know the Cocos Creator.
-After creating the game i made a short tutorial split in steps to describe the overall process. [Here it is](./docs/introduction.md)
+There is a pretty much work behind and i am pretty satisfied with the result.
+
+Now we can defend the Earth!
+
+In the tutorial we touched these concepts in the Cocos Creator:
+- Sprite component to render sprites
+- Chipmunk physics with bodies, shapes, gravity and collision callbacks
+- Tile map sprite to render tiled maps
+- Scheduler to schedule callback leveraging the Cocos Creator engine
+- Animation to play sprite animations
+- AudioClip to play sound effects
+- Prefabs to create preset nodes dynamically
+- EventManager to hook input events
+
 
 # Links
 And here are the links of tools and art i used for the tutorial:
@@ -17,4 +29,4 @@ And here are the links of tools and art i used for the tutorial:
 [Cocos Creator Docs](http://www.cocos2d-x.org/docs/editors_and_tools/creator/index.html)
 [Chipmunk API Reference](https://chipmunk-physics.net/release/ChipmunkLatest-API-Reference/)
 [Cocos Creator engine on Github](https://github.com/cocos-creator/engine)
-[Cocos Docs on Github](https://github.com/chukong/cocos-docs/pulse)
+[Cocos Docs on Github](https://github.com/chukong/cocos-docs/pulse) 
