@@ -12,4 +12,5 @@
   * [Every meteor needs a tail](/docs/step07.md)
   * [I am not deaf!](/docs/step08.md)
 * [Conclusion](/docs/conclusion.md)
+* [Play](http:\\ggarek.github.io/cocos-creator-tutorial-cannon/play)
 * [Links](/docs/links.md)

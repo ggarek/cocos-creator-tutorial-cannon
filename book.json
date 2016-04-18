@@ -2,5 +2,15 @@
   "gitbook": "2.4.3",
   "structure": {
     "summary": "docs/README.md"
+  },
+  "plugins": [ "edit-link", "github", "prism", "-highlight"],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/ggarek/cocos-creator-tutorial-cannon/tree/master",
+      "label": " "
+    },
+    "github": {
+        "url": "https://github.com/ggarek/cocos-creator-tutorial-cannon"
+    }
   }
 }

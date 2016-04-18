@@ -4,7 +4,7 @@ The Cannon is a simple game i built to get to know the Cocos Creator.
 After creating the game i made a short tutorial split in steps to describe the overall process. [Here it is](./docs/introduction.md).
 
 - [Tutorial: Creation process split in steps](/docs/introduction.md)
-- [Play "The Cannon"](http://ggarek.github.io/cocos-creator-tutorial-cannon/)
+- [Play "The Cannon"](http://ggarek.github.io/cocos-creator-tutorial-cannon/play)
 
 # Links
 And here are the links of tools and art i used for the tutorial:
