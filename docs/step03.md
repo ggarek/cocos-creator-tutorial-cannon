@@ -1,4 +1,4 @@
-# Step 03: Add some dangerous meteors
+# Step 03: Meteors are dangerous
 
 It is time to create some meteors, we will need to add more properties to the game componet:
 

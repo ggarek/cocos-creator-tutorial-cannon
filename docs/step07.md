@@ -1,4 +1,4 @@
-# Step 07: Every meteor needs a tail!
+# Step 07: Every meteor needs a tail
 
 I decided to make our meteors feel more alive. The best thing to make any meteor look happier is a tail.
 

@@ -1,4 +1,4 @@
-# Step 02: Add bullet and make the cannon shot
+# Step 02: Bullets should be shot
 
 It is time to add some bullets!
 

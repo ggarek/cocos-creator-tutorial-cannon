@@ -1,4 +1,4 @@
-# Step 01: Create the cannon and make the barrel move
+# Step 01: Build a cannon, move a barrel
 
 First of all, i assume that you already created an empty Cocos Creator project.
 Now we are ready to start.

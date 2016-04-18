@@ -1,4 +1,4 @@
-# Step 06: Create the ground
+# Step 06: Stand the ground
 
 In this step all the heavy lifiting happend out of the Cocos Creator.
 

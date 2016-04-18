@@ -1,12 +1,5 @@
-# The Cannon. Built with Cocos Creator.
-
-The Cannon is a simple game i built to get to know the Cocos Creator.
-After creating the game i made a short tutorial split in steps to describe the overall process. [Here it is](./docs/introduction.md).
-
-- [Tutorial: Creation process split in steps](/docs/introduction.md)
-- [Play "The Cannon"](http://ggarek.github.io/cocos-creator-tutorial-cannon/)
-
 # Links
+
 And here are the links of tools and art i used for the tutorial:
 
 - [Cocos Creator v1.0](http://blog.cocos2d-x.org/2016/03/cocos-creator-1-0-is-here/)
@@ -20,8 +13,3 @@ And here are the links of tools and art i used for the tutorial:
 - [Chipmunk API Reference](https://chipmunk-physics.net/release/ChipmunkLatest-API-Reference/)
 - [Cocos Creator engine on Github](https://github.com/cocos-creator/engine)
 - [Cocos Docs on Github](https://github.com/chukong/cocos-docs/pulse)
-
-# License
-The directory `./docs` and its contents are Copyright Igor Ovsiannikov. You may not reuse anything therein without my permission.
-
-All other directories and files are MIT Licensed. But if you use them, a link back to https://github.com/ggarek/cocos-creator-tutorial-cannon would be appreciated.
