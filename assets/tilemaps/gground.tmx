@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="2" tilewidth="50" tileheight="50" nextobjectid="1">
+ <tileset firstgid="1" name="ggrounds" tilewidth="50" tileheight="50" tilecount="2" columns="2">
+  <image source="ggrounds.png" trans="ff00ff" width="100" height="50"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="25" height="2">
+  <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+</map>

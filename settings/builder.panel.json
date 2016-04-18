@@ -1,0 +1,13 @@
+{
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.cocos-creator-cannon",
+  "startScene": "ced927ea-88a0-48cb-9c38-5bc92d41e2ce",
+  "title": "cocos-creator-cannon",
+  "webOrientation": "auto"
+}

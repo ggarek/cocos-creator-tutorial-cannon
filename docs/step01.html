@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Build a cannon, move a barrel | The Cannon. Built with Cocos Creator.</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-edit-link/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../docs/step02.html" />
+    
+    
+    <link rel="prev" href="../docs/introduction.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="2.1" data-basepath=".." data-revision="Tue Apr 19 2016 02:21:20 GMT+0300 (MSK)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Read Me
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="docs/introduction.html">
+            
+                
+                    <a href="../docs/introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> Steps</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1" data-path="docs/step01.html">
+            
+                
+                    <a href="../docs/step01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Build a cannon, move a barrel
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="docs/step02.html">
+            
+                
+                    <a href="../docs/step02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Bullets should be shot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="docs/step03.html">
+            
+                
+                    <a href="../docs/step03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Meteors are dangerous
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="docs/step04.html">
+            
+                
+                    <a href="../docs/step04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        A bullet? A meteor? Collide!
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="docs/step05.html">
+            
+                
+                    <a href="../docs/step05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        What if...? Boom!
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="docs/step06.html">
+            
+                
+                    <a href="../docs/step06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Create the ground
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="docs/step07.html">
+            
+                
+                    <a href="../docs/step07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Every meteor needs a tail
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="docs/step08.html">
+            
+                
+                    <a href="../docs/step08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        I am not deaf!
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="docs/conclusion.html">
+            
+                
+                    <a href="../docs/conclusion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Conclusion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+                
+                    <a target="_blank" href="http://ggarek.github.io/cocos-creator-tutorial-cannon/play">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Play
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="docs/links.html">
+            
+                
+                    <a href="../docs/links.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Links
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >The Cannon. Built with Cocos Creator.</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <a id="edit-link" href="https://github.com/ggarek/cocos-creator-tutorial-cannon/tree/master/docs/step01.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp; </a><h1 id="step-01-build-a-cannon-move-a-barrel">Step 01: Build a cannon, move a barrel</h1>
+<p>First of all, i assume that you already created an empty Cocos Creator project.
+Now we are ready to start.</p>
+<p>Let us begin with the cannon. Our cannon consist of body, which i call a tank, and a barrel. So in this step we will create the cannon and make the barrel move.</p>
+<p>All the things about the cannon will happen in a script &apos;assets/scripts/cannon.js&apos;.</p>
+<p>To draw the cannon we need to create sprites. Lets define two SpriteFrames for the tank and the barrel as our script component properties:</p>
+<pre><code class="lang-js">properties<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    barrelSprite<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        type<span class="token punctuation">:</span> cc<span class="token punctuation">.</span>SpriteFrame<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    tankSprite<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        type<span class="token punctuation">:</span> cc<span class="token punctuation">.</span>SpriteFrame<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>When we create the properties in that way, we can set initial values of the properties from within Cocos Creator. In this particular case i defined two properties of type &apos;SpriteFrame&apos;. So now we can select a node in the Cocos Creator, add a cannon script component to it and drag and drop a tank and a barrel sprites to it. Ok, but how do we use it?</p>
+<p>A Component has an onLoad method, which is called upon creation. Lets use it to create those sprites:</p>
+<pre><code class="lang-js"><span class="token function">onLoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Create barrel node</span>
+    <span class="token keyword">const</span> barrelNode <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>barrelNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">cc<span class="token punctuation">.</span>Node</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> barrelSprite <span class="token operator">=</span> barrelNode<span class="token punctuation">.</span><span class="token function">addComponent</span><span class="token punctuation">(</span>cc<span class="token punctuation">.</span>Sprite<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    barrelSprite<span class="token punctuation">.</span>spriteFrame <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>barrelSprite<span class="token punctuation">;</span>
+    barrelNode<span class="token punctuation">.</span><span class="token function">setAnchorPoint</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>node<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>barrelNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// Create cannon node</span>
+    <span class="token keyword">const</span> tankNode <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>tankNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">cc<span class="token punctuation">.</span>Node</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> tankSprite <span class="token operator">=</span> tankNode<span class="token punctuation">.</span><span class="token function">addComponent</span><span class="token punctuation">(</span>cc<span class="token punctuation">.</span>Sprite<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    tankSprite<span class="token punctuation">.</span>spriteFrame <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>tankSprite<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>node<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>tankNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>barrelPosition <span class="token operator">=</span> tankNode<span class="token punctuation">.</span>height <span class="token operator">*</span> <span class="token number">0.4</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// Position barrel</span>
+    barrelNode<span class="token punctuation">.</span><span class="token function">setPosition</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>barrelPosition<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<p>Wow, a lot of things happend, lets review it step by step.</p>
+<p>First of all, i create two nodes, each with &apos;Sprite&apos; componet. The &apos;Sprite&apos; component is used to render a sprite.
+Then both nodes are added to the cannon node.
+And one more thing happens here, i change the anchor of the barrel node so it is easier to position it.</p>
+<p>For better targeting we will need to move the barrel. Let us create several more properties:</p>
+<pre><code class="lang-js">properties<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//...</span>
+    angle<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    baseAngleSpeed<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    angleSpeed<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    leftMaxAngle<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    rightMaxAngle<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Once again, all of this properties can be set from within the Cocos Creator. And if you intialize them here, the properties will be overriden with values from the editor.</p>
+<p>Each component has an &apos;update&apos; method, wich is called every frame, lets use it to update the barrel position:</p>
+<pre><code class="lang-js">update<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>dt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> angleSpeed <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>angleSpeed <span class="token operator">!</span><span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> angle <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>angle <span class="token operator">=</span> <span class="token function">clamp</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>angle <span class="token operator">+</span> angleSpeed <span class="token operator">*</span> dt<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>leftMaxAngle<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>rightMaxAngle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> r <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>barrelPosition<span class="token punctuation">;</span>
+
+        <span class="token keyword">this</span><span class="token punctuation">.</span>barrelNode<span class="token punctuation">.</span><span class="token function">setRotation</span><span class="token punctuation">(</span>angle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>barrelNode<span class="token punctuation">.</span><span class="token function">setPosition</span><span class="token punctuation">(</span>r <span class="token operator">*</span> <span class="token function">sind</span><span class="token punctuation">(</span>angle<span class="token punctuation">)</span><span class="token punctuation">,</span> r <span class="token operator">*</span> <span class="token function">cosd</span><span class="token punctuation">(</span>angle<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<p>Every frame i check if the <code>angleSpeed</code> is not zero, and if it is not i update the position of the barrel according to the speed.
+But here i restrict the barrel angle with &apos;leftMaxAngle&apos; and &apos;rightMaxAngle&apos;. There are several helper functions i use to make code more succinct, here are they (just put it in the very top of the script):</p>
+<pre><code class="lang-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> cos<span class="token punctuation">,</span> sin<span class="token punctuation">,</span> PI <span class="token punctuation">}</span> <span class="token operator">=</span> Math<span class="token punctuation">;</span>
+<span class="token keyword">const</span> rad <span class="token operator">=</span> deg <span class="token operator">=</span><span class="token operator">&gt;</span> deg <span class="token operator">*</span> PI <span class="token operator">/</span> <span class="token number">180</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> cosd <span class="token operator">=</span> deg <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">cos</span><span class="token punctuation">(</span><span class="token function">rad</span><span class="token punctuation">(</span>deg<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> sind <span class="token operator">=</span> deg <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">sin</span><span class="token punctuation">(</span><span class="token function">rad</span><span class="token punctuation">(</span>deg<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> clamp <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token punctuation">,</span> min<span class="token punctuation">,</span> max<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> val <span class="token operator">&lt;</span> min <span class="token operator">?</span> min <span class="token punctuation">:</span> val <span class="token operator">&gt;</span> max <span class="token operator">?</span> max <span class="token punctuation">:</span> val<span class="token punctuation">;</span>
+</code></pre>
+<p>But nothing will happen yet. Why? Because the &apos;angleSpeed&apos; is 0. How do we change it? I suppose the best decision would be to use input events to alter the &apos;angleSpeed&apos;. Lets create a method to hook input events in the cannon component:</p>
+<pre><code class="lang-js"> <span class="token function">hookInput</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> cannon <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    cc<span class="token punctuation">.</span>eventManager<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        event<span class="token punctuation">:</span> cc<span class="token punctuation">.</span>EventListener<span class="token punctuation">.</span>KEYBOARD<span class="token punctuation">,</span>
+        <span class="token function">onKeyPressed</span><span class="token punctuation">(</span>kcode<span class="token punctuation">,</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">switch</span><span class="token punctuation">(</span>kcode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">case</span> cc<span class="token punctuation">.</span>KEY<span class="token punctuation">.</span>left<span class="token punctuation">:</span> 
+                    cannon<span class="token punctuation">.</span>angleSpeed <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">*</span> cannon<span class="token punctuation">.</span>baseAngleSpeed<span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token keyword">case</span> cc<span class="token punctuation">.</span>KEY<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                    cannon<span class="token punctuation">.</span>angleSpeed <span class="token operator">=</span> cannon<span class="token punctuation">.</span>baseAngleSpeed<span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">onKeyReleased</span><span class="token punctuation">(</span>kcode<span class="token punctuation">,</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">switch</span><span class="token punctuation">(</span>kcode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">case</span> cc<span class="token punctuation">.</span>KEY<span class="token punctuation">.</span>left<span class="token punctuation">:</span>
+                <span class="token keyword">case</span> cc<span class="token punctuation">.</span>KEY<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                    cannon<span class="token punctuation">.</span>angleSpeed <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Here i add an event listener to the game event amanger. When the left or right key is pressed alter the &apos;angleSpeed&apos;.
+And set it to 0 upon the key release.</p>
+<p>Now we should call this method to really hook the events:</p>
+<pre><code class="lang-js">onLoad<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//...</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">hookInput</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>It is pretty much all. What do we have now? The cannon is displayed, and the barrel is moving! Not bad for the start, but what about shooting?</p>
+<p><a href="step02.html">Step 02</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../docs/introduction.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../docs/step02.html" class="navigation navigation-next " aria-label="Next page: Bullets should be shot"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-github/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"edit-link":{"base":"https://github.com/ggarek/cocos-creator-tutorial-cannon/tree/master","label":" "},"github":{"url":"https://github.com/ggarek/cocos-creator-tutorial-cannon"}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
